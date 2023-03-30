@@ -3,6 +3,7 @@
 namespace App\Domains\Identity\Models;
 
 use App\Domains\Identity\Traits\SetUUID;
+use Database\Factories\Domains\Identity\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -43,4 +44,9 @@ class User extends Authenticatable
         'id' => 'string',
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function newFactory()
+    {
+        return UserFactory::new();
+    }
 }

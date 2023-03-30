@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Database\Seeders\Domains\Competition\CompetitionRecordSeeder;
+use Database\Seeders\Domains\Competition\CompetitionSeeder;
+use Database\Seeders\Domains\Identity\UserSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,11 +16,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        $this->call([
+            UserSeeder::class,
+            CompetitionSeeder::class,
+            CompetitionRecordSeeder::class
+        ]);
     }
 }

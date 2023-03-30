@@ -3,11 +3,11 @@
 namespace App\Domains\Competition\Models;
 
 use App\Domains\Identity\Traits\SetUUID;
-use Database\Factories\Domains\Competition\CompetitionFactory;
+use Database\Factories\Domains\Competition\CompetitionRecordFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Competition extends Model
+class CompetitionRecord extends Model
 {
     use HasFactory, SetUUID;
 
@@ -40,6 +40,6 @@ class Competition extends Model
 
     protected static function newFactory()
     {
-        return CompetitionFactory::new();
+        return CompetitionRecordFactory::new();
     }
 }
