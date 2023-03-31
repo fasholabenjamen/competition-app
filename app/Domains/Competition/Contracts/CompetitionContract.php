@@ -6,7 +6,6 @@ use App\Domains\Competition\Models\Competition;
 use App\Domains\Competition\Models\CompetitionRecord;
 use App\Domains\Identity\Models\User;
 use App\Infrastructure\Contracts\BaseRepository;
-use Illuminate\Database\Eloquent\Collection;
 
 interface CompetitionContract extends BaseRepository
 {
