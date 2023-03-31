@@ -78,13 +78,21 @@ abstract class EloquentRepository implements BaseRepository
             return $this->model->with($this->with)
                 ->where($criteria)
                 ->orderByDesc('created_at')
-                ->firstOrFail();
+                ->first();
         }
 
         return $this->model->with($this->with)
             ->withoutGlobalScopes()
             ->where($criteria)
             ->orderByDesc('created_at')
-            ->firstOrFail();
+            ->first();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function checkBy(array $criteria): bool
+    {
+        return $this->model->where($criteria)->exists();
     }
 }

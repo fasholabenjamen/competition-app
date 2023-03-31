@@ -64,4 +64,13 @@ interface BaseRepository
      * @return Model
      */
     public function update(Model $model, array $data): Model;
+
+    /**
+     * Check if resource exists by key value criteria.
+     *
+     * @param array $criteria
+     * @return bool
+     * @throws ModelNotFoundException
+     */
+    public function checkBy(array $criteria): bool;
 }

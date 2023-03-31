@@ -2,7 +2,7 @@
 
 namespace App\Domains\Competition\Providers;
 
-use App\Domains\Competition\Contracts\CompetitionRepository;
+use App\Domains\Competition\Contracts\CompetitionContract;
 use App\Domains\Competition\Services\CompetitionService;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,6 +24,6 @@ class CompetitionServiceProvider extends ServiceProvider{
      */
     public function boot()
     {
-        app()->bind(CompetitionRepository::class, fn () => new CompetitionService);
+        app()->bind(CompetitionContract::class, fn () => new CompetitionService);
     }
 }

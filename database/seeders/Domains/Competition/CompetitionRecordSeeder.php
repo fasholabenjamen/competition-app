@@ -17,8 +17,6 @@ class CompetitionRecordSeeder extends Seeder
      */
     public function run()
     {
-        CompetitionRecord::truncate();
-
         $competitions = Competition::all();
         $athletes = User::all();
 

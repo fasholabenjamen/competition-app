@@ -14,6 +14,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(5)->create();
+        User::factory()->create(['id' => '74557280-e509-483e-bdca-d62db74bb24e']);
     }
 }

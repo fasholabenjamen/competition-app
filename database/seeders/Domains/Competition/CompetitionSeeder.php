@@ -14,12 +14,6 @@ class CompetitionSeeder extends Seeder
      */
     public function run()
     {
-        
-        // Competition::truncate();
-
-        Competition::factory()->createMany([
-            ['id' => 'ddb8610a-cf0d-11ed-afa1-0242ac120002', 'name' => 'Swimming'],
-            ['id' => '8c673f50-cf0e-11ed-afa1-0242ac120002', 'name' => 'Running'],
-        ]);
+        Competition::factory()->create(['id' => 'ddb8610a-cf0d-11ed-afa1-0242ac120002', 'name' => 'Swimming']);
     }
 }
