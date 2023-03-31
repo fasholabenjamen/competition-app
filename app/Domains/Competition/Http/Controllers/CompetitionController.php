@@ -23,7 +23,7 @@ class CompetitionController extends Controller {
     {
         $this->service->startCompetition($competition, $athlete);
 
-        return response()->json(status: 200);
+        return response()->json(status: 204);
     }
 
     /**
@@ -36,7 +36,7 @@ class CompetitionController extends Controller {
     {
         $this->service->finishCompetition($competition, $athlete);
 
-        return response()->json(status: 200);
+        return response()->json(status: 204);
     }
 
     /**
